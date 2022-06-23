@@ -1,5 +1,5 @@
 :root {
-    --bg-color: #FFEFC2; 
+    --bg-color: #fff8e3; 
     --my-pink: #FF00F5; 
 }
 
@@ -12,16 +12,20 @@ h1{
 }
 
 .login{
+    height: 40px;
     background-color: var(--my-pink);
     color: white;
+    font-weight: 500;
     border: 2px solid var(--my-pink);
     border-radius: 30px;
     font-size: 20px;
+    transition-duration: 0.4s;
 }
 
 .login:hover{
     background-color: white;
     color: var(--my-pink);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 170px 0 rgba(0,0,0,0.19);
 }
 
 .adaptive{
@@ -35,4 +39,8 @@ h1{
 .adaptive:hover{
     background-color: var(--my-pink);
     color: white;
+}
+
+a{
+    text-decoration: none;
 }
