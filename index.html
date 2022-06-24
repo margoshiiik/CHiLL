@@ -8,13 +8,146 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/lodash/4.10.0/lodash.js"></script>
     </head>
 <body>
     <header>
-        <div class="d-flex justify-content-around mt-3"><a href="index.html"><h1 class="d-inline">CHiLL</h1></a>
-            <button type="button" class="login ps-4 pe-4">Login</button></div>
-        
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-10">
+                     <a href="index.html"><h1>CHiLL</h1></a>
+                </div>
+                <div class="col-2">
+                    <button type="button" class="login ps-4 pe-4">Login</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-start mt-3">
+            <a class="home menu me-4">
+                MENU
+            </a>
+
+            <a class="about menu me-4">
+                ABOUT
+            </a>
+
+            <a class="orders menu me-4">
+                ORDERS
+            </a>
+
+            <a class="settings menu me-4">
+                SETTINGS
+            </a>
+        </div>
+
+        <div class="input-group mb-3 mt-4">
+            <input type="text" class="form-control" id="searchInput" placeholder="What are you looking for?" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="searchButton">Search</button>
+        </div>
+
+        <div class="d-flex justify-content-around">
+            <button class="whiteBut ps-4 pe-4" id="allButton">ALL</button>
+            <button class="whiteBut ps-4 pe-4" id="clothesButton" >CLOTHES</button>
+            <button class="whiteBut ps-4 pe-4" id="bagsButton">BAGS</button>
+            <button class="whiteBut ps-4 pe-4" id="accessoriesButton" >ACCESSORIES</button>
+            <button class="whiteBut ps-4 pe-4" id="toysButton" >TOYS</button>
+            <button class="whiteBut ps-4 pe-4" id="decoButton" >DECO</button>
+            <button class="whiteBut ps-4 pe-4" id="kitchenButton" >KITCHEN</button>
+        </div>
+
     </header>
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-3">
+                        <div class="filterDiv d-none d-md-block">
+                            <h2 class="f text-center">Filter</h2>
+                            <details class="mt-2">
+                                <summary>Color</summary>
+                                <div class="check">
+                                    <ul>
+                                        <li>
+                                            <input type="checkbox" id="black"><label for="">Black</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="white"><label for="">White</label>
+                                        </li>
+
+                                        <li>
+                                            <input type="checkbox" id="beidge"><label for="">Beidge</label>
+                                        </li>
+
+                                        <li>
+                                            <input type="checkbox" id="red"><label for="">Red</label>
+                                        </li>
+
+                                        <li>
+                                            <input type="checkbox" id="green"><label for="">Green</label>
+                                        </li>
+
+                                        <li>
+                                            <input type="checkbox" id="pink"><label for="">Pink</label>
+                                        </li>
+
+                                        <li>
+                                            <input type="checkbox" id="blue"><label for="">Blue</label>
+                                        </li>
+
+                                        <li>
+                                            <input type="checkbox" id="orange"><label for="">Orange</label>
+                                        </li>
+
+                                        <li>
+                                            <input type="checkbox" id="grey"><label for="">Grey</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </details>
+                            <details class="mt-2">
+                                <summary>Size</summary>
+                                <div class="input-group mb-3 mt-2">
+                                    <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                                    <select class="form-select" id="size">
+                                      <option selected value="choose">Choose...</option>
+                                      <option value="small">Small</option>
+                                      <option value="medium">Medium</option>
+                                      <option value="large">Large</option>
+                                      <option value="oneSize">One size</option>
+                                    </select>
+                                  </div>
+                            </details>
+                            <details class="mt-2">
+                                <summary>Price</summary>
+                                <div class="text-center">From</div><input type="number" id="from" class="priceInput">
+                                <div class="text-center">to</div><input id="to" class="priceInput" type="number">
+                            </details>
+                    
+                            <button class="but mt-3" id="filterButton">Filter</button>
+                        </div>
+                    </div>
+
+
+                    <div class="col-9">
+                        
+    
+                        <div id="wrapper" class="wrapper">
+
+                        </div>
+    
+                    </div>
+
+
+                </div>
+        </div>
+
     <script src="js/app.js" type="module"></script>
 </body>
 </html>
