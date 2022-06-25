@@ -15,8 +15,8 @@ function printProducts(array) {
                 <div class="forProduct" id="forProducts${ind}">
                     <img src="${item.photo}" class="mt-3"alt="">
 
-                    <h3 class="text-center mt-2">${item.title} $</h3>
-                    <h5 class="text-center mt-2">${item.price}</h5>
+                    <h3 class="text-center mt-2">${item.title}</h3>
+                    <h5 class="text-center mt-2">${item.price}$</h5>
 
                     <a class="button" href="#popup${ind}"><button class="buyButton">Buy</button></a>
                         <div id="popup${ind}" class="overlay">
@@ -105,7 +105,7 @@ function forSearchButton(){
             
         })
 
-        printProducts(printThis);
+      (printThis.length == 0) ? printProducts(products) : printProducts(printThis);
 }
 
 function filterByPrice(valueFrom, valueTo) {
