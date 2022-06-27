@@ -1,6 +1,8 @@
 import { products } from "/js/products.js";
+import { users } from "/js/users.js";
 
 
+let isAutorized = false; 
 
 
 function printProducts(array) {
@@ -13,7 +15,7 @@ function printProducts(array) {
         div_wrapper.innerHTML =
             ` 
                 <div class="forProduct" id="forProducts${ind}">
-                    <img src="${item.photo}" class="mt-3"alt="">
+                    <img src="/${item.photo}" class="mt-3"alt="">
 
                     <h3 class="text-center mt-2">${item.title}</h3>
                     <h5 class="text-center mt-2">${item.price}$</h5>
@@ -24,7 +26,7 @@ function printProducts(array) {
                             <div class="container">
                             <div class="row">
                                 <div class="col-6">
-                                    <img src="${item.photo}" alt="">
+                                    <img src="/${item.photo}" alt="">
                                 </div>
             
                                 <div class="col-6 text-center">
@@ -92,7 +94,6 @@ function forButtons(e){
         printProducts(printThis);
     }
 }
-
 
 function forSearchButton(){
     let input = document.getElementById("searchInput").value.trim().toLowerCase();
@@ -196,3 +197,97 @@ document.getElementById('toysButton').addEventListener('click', forButtons);
 document.getElementById('decoButton').addEventListener('click', forButtons);
 document.getElementById('kitchenButton').addEventListener('click', forButtons);
 
+
+
+
+function login(){
+    let username = document.getElementById('loginUsername').value.trim(); 
+    let password = document.getElementById('loginPassword').value;
+
+    let user = users.find(function(element) {
+        return element.username === username;
+    });
+
+    if (user != undefined && user.password === password){ 
+        console.log('you successfully logged in') 
+        
+        window.open('html/UserPage.html');
+}
+
+    else console.log('wrong username or password');
+
+    
+}
+
+document.getElementById("loginButton").addEventListener('click', login);
+
+
+
+function signUP(){
+    let name = document.getElementById('nameSignup').value.trim();
+    let surname =  document.getElementById('surnameSignup').value.trim();
+    let username = document.getElementById('usernameSignup').value.trim();
+    let email = document.getElementById('emailSignup').value.trim();
+    let password1 = document.getElementById('password1Signup').value;
+    let password2 = document.getElementById('password2Signup').value;
+
+    if(name==''|| surname =='' || username =='' || email == '' || password1 == '' || password2 == '') {
+        swal("Oh wait", "Make sure you fill everything!", "warning");
+    }
+
+    let isOk = true; 
+
+    let tryToFindUser = users.find(function(element) {
+        return element.username === username;
+    });
+
+    if(tryToFindUser != undefined) {
+        if(tryToFindUser.username == username) {
+        swal("Oh wait!", "This username is already taken :(", "error");
+        isOk = false;
+        }
+        if(tryToFindUser.email == email){
+        swal("Oh wait!", "This email is already have an account :(", "error");
+        isOk = false;
+        }
+    }
+
+    if(password1 !== password2) {
+        isOk = false; 
+        swal("Oh wait!", "This email is already have an account :(", "error");
+    }    
+
+    if(isOk){
+        users.push({name: name, surname: surname, username: username, password: password1, email: email, liked: [], photo: '', bio: ''})
+        swal("Good", "Now you have an account", "succesful");
+        console.log(users);
+
+        // const fs = require('fs');
+        // const jsonContent = JSON.stringify(users);
+
+        // fs.writeFile ("input.json", jsonContent, function(err) {
+        //     if (err) throw err;
+        //     console.log('complete');
+        //     }
+        // );
+
+        //openUserPage('html/UserPage.html', products[length-1])
+        
+       
+       // window.innerHTML('/html/UserPage.html')
+
+    }
+
+    else swal('something went wrong');
+
+
+};
+
+
+
+document.getElementById("signupButton").addEventListener('click', signUP);
+
+
+document.getElementById('orders').addEventListener('click', () => {
+    swal("Oh wait!", "If you want to visit this page you have to autorize", "warning");
+})
