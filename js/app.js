@@ -103,10 +103,11 @@ function forSearchButton(){
         products.forEach((item) => {
             let arr = item.tags; 
             if(arr.includes(input)) printThis.push(item);
-            
         })
 
       (printThis.length == 0) ? printProducts(products) : printProducts(printThis);
+
+      
 }
 
 function filterByPrice(valueFrom, valueTo) {

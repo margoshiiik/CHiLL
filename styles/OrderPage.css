@@ -1,0 +1,38 @@
+.createOrder{
+    display: block;
+    margin: 0 auto;
+}
+
+#wrapper-for-orders {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  
+  .nophoto{
+    width: 200px;
+    height: 200px;
+  }
+
+
+  .popup{
+    width: 800px;
+    height: 600px;
+  }
+
+  .area{
+    height: 80%;
+  }
+
+  .priceInput{
+    width: 80%;
+    display:block;
+    margin: 0 auto;
+  }
+
+  button{
+    display:block;
+    margin: 0 auto;
+  }
+
