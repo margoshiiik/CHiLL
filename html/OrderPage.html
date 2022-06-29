@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&display=swap" rel="stylesheet">
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Order Page</title>
 </head>
 <body>
@@ -57,7 +57,7 @@
 
     <h2 class="text-center mt-5">- Here you can create or pick an order -</h2>
 
-    <a href="#popupOrder"><button class="createOrder mt-4">Create an order</button></a>
+    <a href="#popupOrder"><button class=" mt-4">Create an order</button></a>
 
     <div id="wrapper-for-orders" class="mt-5">
 
@@ -77,21 +77,21 @@
                         <img src="/picsOther/nophoto.jpg" class="nophoto mt-4" alt="">
             
                         <div class="input-group mb-3 mt-4">
-                            <input type="file" class="form-control" id="inputGroupFile01">
+                            <input type="file" class="form-control" id="photoFile">
                         </div>
                     </div>
 
                     <div class="col-6 mt-4">
                         <h3>Add the description:</h3>
-                        <textarea class="form-control area" aria-label="With textarea"></textarea>
+                        <textarea class="form-control area" id="description" aria-label="With textarea"></textarea>
                     </div>
                 </div>
             </div>
 
-            <input type="number" class="form-control priceInput mt-4" placeholder="Price you are ready to pay in $">
+            <input type="number" class="form-control priceInput mt-4" id="orderPrice"placeholder="Price you are ready to pay in $">
 
 
-            <button class="mt-4">Make an order</button>
+            <button class="mt-4" id="orderButton">Make an order</button>
               
 
         </div>

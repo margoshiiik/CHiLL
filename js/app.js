@@ -217,6 +217,7 @@ function login(){
 
     else console.log('wrong username or password');
 
+    changeAuthorisedStatus(user);
     
 }
 
@@ -281,7 +282,7 @@ function signUP(){
 
     else swal('something went wrong');
 
-
+    changeAuthorisedStatus(users[length-1]);
 };
 
 
@@ -292,3 +293,9 @@ document.getElementById("signupButton").addEventListener('click', signUP);
 document.getElementById('orders').addEventListener('click', () => {
     swal("Oh wait!", "If you want to visit this page you have to autorize", "warning");
 })
+
+
+function changeAuthorisedStatus(who){
+    isAutorized = !isAutorized; 
+    let user = who; 
+}

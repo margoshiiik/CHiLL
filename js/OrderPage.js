@@ -17,22 +17,21 @@ function printOrders(array) {
     
                         <a class="button" href="#popup${ind}"><button class="buyButton">Pick</button></a>
                             <div id="popup${ind}" class="overlay">
-                            <div class="popup">
+                            <div class="popupOrder popup">
                                 <div class="container">
                                 <div class="row">
-                                    <div class="col-6">
-                                        <img src="/${item.photo}" alt="">
+                                    <div class="col-6 mt-4">
+                                        <img src="/${item.photo}" class="mt-5"alt="">
                                     </div>
                 
-                                    <div class="col-6 text-center">
+                                    <div class="col-6 mt-4 text-center">
                                     <a class="close" href="#">&times;</a>
                                         <h1 class="mt-4">${item.name}</h1>
                                         <h2 class="mt-4">Offered price: ${item.price}$</h2>
                                         <h5 class="mt-4 ">"${item.info}"s</h5>
-                                        <h5 class="mt-4 "><strong>Customer:</strong> ${item.customer}</h5>
                                         
                                         <button class="mt-5">Pick order</button>
-                                        <button class="mt-5 ms-4 whiteBut">Connect with customer</button>
+                                        <button class="mt-4 whiteBut">Connect with customer</button>
                                         
                                         
                                         
@@ -57,3 +56,22 @@ function printOrders(array) {
 
 
 printOrders(orders); 
+
+
+function createOrder(){
+    let description = document.getElementById('description').value;
+    let price = document.getElementById('orderPrice').value; 
+    let photo = document.getElementById('photoFile').value; 
+    console.log(photo)
+    console.log(price)
+    console.log(description)
+
+    if(description == '' || price== ''){
+        swal("Oh wait", "Make sure you fill everything!", "warning")
+    }
+    else {
+        orders.push({})
+    }
+}
+
+document.getElementById('orderButton').addEventListener('click', createOrder); 
