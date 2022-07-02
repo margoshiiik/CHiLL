@@ -38,8 +38,66 @@
 
 
   .popupOrder{
-    width: 800px;
+    width: 60%px;
     height: 450px;
   }
 
 
+  @media screen and (max-width: 1100px) {
+    #wrapper-for-orders{
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+  }
+
+  
+  @media screen and (max-width: 800px) {
+    #wrapper-for-orders{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+
+    .nophoto{
+      display: none;
+    }
+
+
+
+  }
+
+  @media screen and (max-width: 1100px) {
+    .popupPic{
+      margin-top: 15%;
+      border-radius: 30px;
+    }
+  }
+
+
+  @media screen and (max-width: 1000px) {
+    .popup{
+        height: auto;
+        width: 70%;
+    }
+
+    .popupPic{
+      height: 150px;
+      width:150px; 
+      margin-top: 15%;
+      border-radius: 30px;
+    }
+
+  }
+
+
+  @media screen and (max-width: 650px) {
+    .itemInfo{
+      display: none;
+    }
+
+    .popup{
+      width:90%;
+      margin: 30px auto;
+    }
+  }

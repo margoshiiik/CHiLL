@@ -20,18 +20,18 @@ function printOrders(array) {
                             <div class="popupOrder popup">
                                 <div class="container">
                                 <div class="row">
-                                    <div class="col-6 mt-4">
-                                        <img src="/${item.photo}" class="mt-5"alt="">
+                                    <div class="col-lg-6 mt-4">
+                                        <img src="/${item.photo}" class="mt-5 popupPic"alt="">
                                     </div>
                 
-                                    <div class="col-6 mt-4 text-center">
+                                    <div class="col-lg-6 mt-4 text-center">
                                     <a class="close" href="#">&times;</a>
                                         <h1 class="mt-4">${item.name}</h1>
                                         <h2 class="mt-4">Offered price: ${item.price}$</h2>
                                         <h5 class="mt-4 ">"${item.info}"s</h5>
                                         
                                         <button class="mt-5">Pick order</button>
-                                        <button class="mt-4 whiteBut">Connect with customer</button>
+                                        <button class="mt-4 whiteBut">Chat customer</button>
                                         
                                         
                                         

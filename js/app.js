@@ -25,15 +25,15 @@ function printProducts(array) {
                         <div class="popup">
                             <div class="container">
                             <div class="row">
-                                <div class="col-6">
-                                    <img src="/${item.photo}" alt="">
+                                <div class="col-lg-6">
+                                    <img src="/${item.photo}" class="popupPic" alt="">
                                 </div>
             
-                                <div class="col-6 text-center">
+                                <div class="col-lg-6 text-center">
                                 <a class="close" href="#">&times;</a>
                                     <h1 class="mt-4">${item.title}</h1>
                                     <h2 class="mt-4">${item.price}$</h2>
-                                    <h3 class="mt-4 ">${item.info}</h3>
+                                    <h3 class="mt-4 itemInfo ">${item.info}</h3>
                                     <h5 class="mt-4 ">Made by</h5>
                                     <h5 class="mt-2 ">${item.author}</h5>
                                     
