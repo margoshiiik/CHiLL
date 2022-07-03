@@ -6,6 +6,87 @@ let isAutorized = false;
 
 
 function printProducts(array) {
+
+    const body = document.getElementById('body');
+    body.innerHTML = ''; 
+    body.innerHTML = `<div class="row">
+    <div class="col-md-3">
+            <div class="filterDiv d-none d-md-block">
+                <h2 class="f text-center">Filter</h2>
+                <details class="mt-2">
+                    <summary>Color</summary>
+                    <div class="check">
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="black"><label for="">Black</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="white"><label for="">White</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" id="beidge"><label for="">Beidge</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" id="red"><label for="">Red</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" id="green"><label for="">Green</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" id="pink"><label for="">Pink</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" id="blue"><label for="">Blue</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" id="orange"><label for="">Orange</label>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" id="grey"><label for="">Grey</label>
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="mt-2">
+                    <summary>Size</summary>
+                    <div class="input-group mb-3 mt-2">
+                        <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                        <select class="form-select" id="size">
+                          <option selected value="choose">Choose...</option>
+                          <option value="small">Small</option>
+                          <option value="medium">Medium</option>
+                          <option value="large">Large</option>
+                          <option value="oneSize">One size</option>
+                        </select>
+                      </div>
+                </details>
+                <details class="mt-2">
+                    <summary>Price</summary>
+                    <div class="text-center">From</div><input type="number" id="from" class="priceInput">
+                    <div class="text-center">to</div><input id="to" class="priceInput" type="number">
+                </details>
+        
+                <button class="but mt-3" id="filterButton">Filter</button>
+            </div>
+    </div>
+
+
+        <div class="col-md-9">
+            
+            <div id="wrapper" class="wrapper">
+            </div>
+
+        </div>          
+
+</div>`
+
     const myNode = document.getElementById('wrapper');
     myNode.innerHTML = '';
 
@@ -102,6 +183,7 @@ printProducts(products);
 
 function forButtons(e){
     let word = e.target.innerText.toLowerCase();
+    console.log(word)
     if(word==='all') printProducts(products);
     else {
         let printThis = []; 
@@ -224,17 +306,6 @@ document.getElementById('decoButton').addEventListener('click', forButtons);
 document.getElementById('kitchenButton').addEventListener('click', forButtons);
 
 
-
-
-
-
-
-// document.getElementById("signupButton").addEventListener('click', signUP);
-
-
-// document.getElementById('orders').addEventListener('click', () => {
-   
-// })
 
 document.getElementById('openbasketPage').addEventListener('click', () => {
     let body = document.getElementById('body'); 

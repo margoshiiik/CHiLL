@@ -189,6 +189,7 @@ img{
   .popupLike{
     border: 2px solid var(--my-pink);
     border-radius: 30px;
+    margin-bottom: 20px;
   }
 
   .popupLike img{

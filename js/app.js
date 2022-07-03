@@ -37,8 +37,8 @@ function printProducts(array) {
                                     <h5 class="mt-4 ">Made by</h5>
                                     <h5 class="mt-2 ">${item.author}</h5>
                                     
-                                    <button class="mt-4" id="addToBasket">Add to basket</button>
-                                    <button class="mt-4 ms-4 whiteBut" id="buyButtonPopup">Buy</button>
+                                    <button class="mt-4" id="addToBasket${ind}">Add to basket</button>
+                                    <button class="mt-4 ms-4 whiteBut" id="buyButtonPopup${ind}">Buy</button>
                                     
                                     <img src="/picsOther/heartEmpty.png" id="heart${ind}" class="heart mt-4" alt="">
                                     
@@ -59,8 +59,17 @@ function printProducts(array) {
         swal("Oh wait", "You have to login or create an account", "warning");
       });
 
+      document.getElementById('addToBasket' + ind).addEventListener('click', () => {
+        swal("Oh wait", "You have to login or create an account", "warning");
+     })
+
+     document.getElementById('buyButtonPopup' + ind).addEventListener('click', () => {
+        swal("Oh wait", "You have to login or create an account", "warning");
+     })
+
       let randomColor = "#" + Math.floor(Math.random()*16777215).toString(16); 
       div_back.style.setProperty('background-color', randomColor);
+
 
 
     })
@@ -148,34 +157,36 @@ function myFilter(){
     let blueItem = document.getElementById('blue').checked; 
     let greyItem = document.getElementById('grey').checked; 
 
-    let printThis = []; 
+    let printThis = new Set; 
 
-    if(beidgeItem) printThis = printThis.concat(beidgeArray); 
-    if(blackItem) printThis = printThis.concat(blackArray);
-    if(whiteItem) printThis = printThis.concat(whiteArray);
-    if(redItem) printThis = printThis.concat(redArray);
-    if(greenItem) printThis = printThis.concat(greenArray);
-    if(orangeItem) printThis = printThis.concat(orangeArray);
-    if(pinkItem) printThis = printThis.concat(pinkArray);
-    if(blueItem) printThis = printThis.concat(blueArray);
-    if(greyItem) printThis = printThis.concat(greyArray);
+    if(beidgeItem) beidgeArray.forEach((item) => {printThis.add(item)}); 
+    if(blackItem)blackArray.forEach((item) => {printThis.add(item)}); ;
+    if(whiteItem) whiteArray.forEach((item) => {printThis.add(item)});
+    if(redItem) redArray.forEach((item) => {printThis.add(item)});
+    if(greenItem) greenArray.forEach((item) => {printThis.add(item)});
+    if(orangeItem) orangeArra.forEach((item) => {printThis.add(item)});
+    if(pinkItem) pinkArray.forEach((item) => {printThis.add(item)});
+    if(blueItem) blueArray.forEach((item) => {printThis.add(item)});
+    if(greyItem) greyArray.forEach((item) => {printThis.add(item)});
+
+    
 
     if(printThis.length == 0) printThis = products;
     
-    console.log(printThis);
+    let arr = Array.from(printThis); 
 
     let from = document.getElementById("from").value; 
     let to = document.getElementById("to").value; 
-    if (from !== "" && to !== "" && Number.parseInt(from) >= 0) printThis = printThis.filter(filterByPrice(from, to));
+    if (from !== "" && to !== "" && Number.parseInt(from) >= 0) arr = arr.filter(filterByPrice(from, to));
 
-    console.log(printThis);
+    console.log(arr);
 
     let size = document.getElementById("size").value;
 
-    if(size != "choose") printThis = printThis.filter(elem => elem.size == size); 
-    console.log(printThis);
+    if(size != "choose") arr = arr.filter(elem => elem.size == size); 
+    console.log(arr);
 
-    printProducts(printThis);
+    printProducts(arr);
 }
 
 document.getElementById("filterButton").addEventListener('click', myFilter);
@@ -270,14 +281,6 @@ document.getElementById("signupButton").addEventListener('click', signUP);
 
 document.getElementById('orders').addEventListener('click', () => {
     swal("Oh wait!", "If you want to visit this page you have to autorize", "warning");
-})
-
-document.getElementById('addToBasket').addEventListener('click', () => {
-    swal("Oh wait", "You have to login or create an account", "warning");
-})
-
-document.getElementById('buyButtonPopup').addEventListener('click', () => {
-    swal("Oh wait", "You have to login or create an account", "warning");
 })
 
 
