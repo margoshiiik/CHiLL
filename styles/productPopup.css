@@ -16,12 +16,12 @@
 
 
   .popup {
-    margin: 100px auto;
+    margin: 50px auto;
     padding: 20px;
     background: var(--bg-color);
     border-radius: 20px;
     width: 60%;
-    height: 400px;
+    height: auto;
     position: relative;
     transition: all 2s ease-in-out;
   }

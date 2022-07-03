@@ -37,8 +37,8 @@ function printProducts(array) {
                                     <h5 class="mt-4 ">Made by</h5>
                                     <h5 class="mt-2 ">${item.author}</h5>
                                     
-                                    <button class="mt-4">Add to basket</button>
-                                    <button class="mt-4 ms-4 whiteBut">Buy</button>
+                                    <button class="mt-4" id="addToBasket">Add to basket</button>
+                                    <button class="mt-4 ms-4 whiteBut" id="buyButtonPopup">Buy</button>
                                     
                                     <img src="/picsOther/heartEmpty.png" id="heart${ind}" class="heart mt-4" alt="">
                                     
@@ -56,17 +56,7 @@ function printProducts(array) {
       let img = document.getElementById('heart'+ind);
       
       img.addEventListener('click', () => {
-        if(img.getAttribute('src') == '/picsOther/heartEmpty.png') {
-            img.setAttribute('src', '/picsOther/heart.png'); 
-            item.liked = true; 
-            console.log(item.liked);
-        }
-         else{
-            img.setAttribute('src', '/picsOther/heartEmpty.png')
-            item.liked = false; 
-            console.log(item);
-         }
-        
+        swal("Oh wait", "You have to login or create an account", "warning");
       });
 
       let randomColor = "#" + Math.floor(Math.random()*16777215).toString(16); 
@@ -100,14 +90,17 @@ function forSearchButton(){
     console.log(input);
 
     let printThis = []; 
-        products.forEach((item) => {
-            let arr = item.tags; 
-            if(arr.includes(input)) printThis.push(item);
-        })
 
-      (printThis.length == 0) ? printProducts(products) : printProducts(printThis);
+    products.forEach((item) => {
+        let arr = item.tags;
+        (arr.includes(input)) ? printThis.push(item) : console.log('ddd')
+    })
 
-      
+    console.log(printThis)
+
+    printProducts(printThis);
+
+
 }
 
 function filterByPrice(valueFrom, valueTo) {
@@ -212,12 +205,11 @@ function login(){
     if (user != undefined && user.password === password){ 
         console.log('you successfully logged in') 
         
-        window.open('html/UserPage.html');
+        window.open('/html/UserPage.html');
 }
 
     else console.log('wrong username or password');
 
-    changeAuthorisedStatus(user);
     
 }
 
@@ -254,29 +246,15 @@ function signUP(){
         }
     }
 
-    if(password1 !== password2) {
+    else if(password1 !== password2) {
         isOk = false; 
         swal("Oh wait!", "This email is already have an account :(", "error");
     }    
 
-    if(isOk){
+    else if(isOk){
         users.push({name: name, surname: surname, username: username, password: password1, email: email, liked: [], photo: '', bio: ''})
         swal("Good", "Now you have an account", "succesful");
-        console.log(users);
-
-        // const fs = require('fs');
-        // const jsonContent = JSON.stringify(users);
-
-        // fs.writeFile ("input.json", jsonContent, function(err) {
-        //     if (err) throw err;
-        //     console.log('complete');
-        //     }
-        // );
-
-        //openUserPage('html/UserPage.html', products[length-1])
-        
-       
-       // window.innerHTML('/html/UserPage.html')
+        window.open('/html/UserPage.html');
 
     }
 
@@ -292,6 +270,14 @@ document.getElementById("signupButton").addEventListener('click', signUP);
 
 document.getElementById('orders').addEventListener('click', () => {
     swal("Oh wait!", "If you want to visit this page you have to autorize", "warning");
+})
+
+document.getElementById('addToBasket').addEventListener('click', () => {
+    swal("Oh wait", "You have to login or create an account", "warning");
+})
+
+document.getElementById('buyButtonPopup').addEventListener('click', () => {
+    swal("Oh wait", "You have to login or create an account", "warning");
 })
 
 

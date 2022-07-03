@@ -8,7 +8,8 @@ export let products = [
         tags: ["ring", "rings", "jewelry"], 
         info: "pretty rings", 
         photo: "picsProducts/pic0.jpg", 
-        size: "small"
+        size: "small",
+        tobasket: false
     },
     {
         title: "Cups",
@@ -19,7 +20,8 @@ export let products = [
         tags: ["cup", "cups", "dishes"], 
         info: "pretty cups", 
         photo: "picsProducts/pic1.jpg", 
-        size: "small"
+        size: "small",
+        tobasket: false
     },
     {
         title: "Sweater",
@@ -30,7 +32,8 @@ export let products = [
         tags: ["sweater", "cardigan", "clothes"], 
         info: "pretty sweater with strawberry", 
         photo: "picsProducts/pic2.jpg", 
-        size: "middle"
+        size: "middle",
+        tobasket: false
     },
     {
         title: "Socks",
@@ -41,7 +44,8 @@ export let products = [
         tags: ["socks", "clothes"], 
         info: "pretty socks", 
         photo: "picsProducts/pic3.jpg", 
-        size: "small"
+        size: "small",
+        tobasket: false
     },
     {
         title: "Bag",
@@ -52,7 +56,8 @@ export let products = [
         tags: ["bag", "bags", "shop"], 
         info: "pretty bags", 
         photo: "picsProducts/pic4.jpg", 
-        size: "oneSize"
+        size: "oneSize",
+        tobasket: false
     },
     {
         title: "Rings",
@@ -63,7 +68,8 @@ export let products = [
         tags: ["ring", "rings", "jewelry"], 
         info: "pretty gold rings", 
         photo: "picsProducts/pic5.jpg", 
-        size: "small"
+        size: "small",
+        tobasket: false
     },
     {
         title: "Necklace",
@@ -74,7 +80,8 @@ export let products = [
         tags: ["necklace", "jewelry"], 
         info: "pretty necklace", 
         photo: "picsProducts/pic6.jpg", 
-        size: "oneSize"
+        size: "oneSize",
+        tobasket: false
     },
     {
         title: "Cup",
@@ -85,7 +92,8 @@ export let products = [
         tags: ["ring", "rings", "jewelry"], 
         info: "pretty cups", 
         photo: "picsProducts/pic7.jpg", 
-        size: "oneSize"
+        size: "oneSize",
+        tobasket: false
     },
     {
         title: "Toy",
@@ -96,7 +104,8 @@ export let products = [
         tags: ["child", "children", "kitchen"], 
         info: "pretty rings", 
         photo: "picsProducts/pic8.jpg", 
-        size: "oneSize"
+        size: "oneSize",
+        tobasket: false
     },
     {
         title: "Toy",
@@ -107,7 +116,8 @@ export let products = [
         tags: ["toy", "child", "children", "deco", "toys"], 
         info: "pretty rings", 
         photo: "picsProducts/pic9.jpg", 
-        size: "oneSize"
+        size: "oneSize",
+        tobasket: false
     },
     {
         title: "Shawl",
@@ -118,7 +128,8 @@ export let products = [
         tags: ["shawl", "clothes", "accessories"], 
         info: "pretty shawl", 
         photo: "picsProducts/pic10.jpg", 
-        size: "oneSize"
+        size: "oneSize",
+        tobasket: false
     },
     {
         title: "Bag",
@@ -129,7 +140,8 @@ export let products = [
         tags: ["bag", "accessories"], 
         info: "pretty bag with rabbit", 
         photo: "picsProducts/pic11.jpg", 
-        size: "small"
+        size: "small",
+        tobasket: false
     },
     {
         title: "Candle",
@@ -140,7 +152,8 @@ export let products = [
         tags: ["candle", "deco"], 
         info: "pretty candles", 
         photo: "picsProducts/pic12.jpg", 
-        size: "oneSize"
+        size: "oneSize",
+        tobasket: false
     },
     {
         title: "Stand",
@@ -151,7 +164,8 @@ export let products = [
         tags: ["plate", "dish", "dishes", "kitchen"], 
         info: "pretty plates", 
         photo: "picsProducts/pic13.jpg", 
-        size: "oneSize"
+        size: "oneSize",
+        tobasket: false
     },
     {
         title: "Stand",
@@ -162,7 +176,8 @@ export let products = [
         tags: ["stand", "deco"], 
         info: "pretty stand", 
         photo: "picsProducts/pic14.jpg", 
-        size: "oneSize"
+        size: "oneSize",
+        tobasket: false
     },
     {
         title: "Sweater",
@@ -173,7 +188,8 @@ export let products = [
         tags: ["sweater", "cardigan", "clothes"], 
         info: "pretty cardigan", 
         photo: "picsProducts/pic15.jpg", 
-        size: "medium"
+        size: "medium",
+        tobasket: false
     },
     {
         title: "Socks",
@@ -184,7 +200,8 @@ export let products = [
         tags: ["socks", "clothes"], 
         info: "pretty socks", 
         photo: "picsProducts/pic16.jpg", 
-        size: "oneSize"
+        size: "oneSize",
+        tobasket: false
     },
     {
         title: "Painting",
@@ -195,7 +212,8 @@ export let products = [
         tags: ["painting", "art", "deco"], 
         info: "pretty picture", 
         photo: "picsProducts/pic17.jpg", 
-        size: "oneSize"
+        size: "oneSize",
+        tobasket: false
     },
     {
         title: "Toy",
@@ -206,7 +224,8 @@ export let products = [
         tags: ["toy", "children", "child", "toys"], 
         info: "pretty toy", 
         photo: "picsProducts/pic18.jpg", 
-        size: "small"
+        size: "small",
+        tobasket: false
     },
     {
         title: "Bag",
@@ -217,6 +236,7 @@ export let products = [
         tags: ["bag", "hat", "clothes", "accessories"], 
         info: "pretty hat and bag", 
         photo: "picsProducts/pic19.jpg", 
-        size: "oneSize"
+        size: "oneSize",
+        tobasket: false
     }
 ];

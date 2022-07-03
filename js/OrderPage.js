@@ -59,19 +59,22 @@ printOrders(orders);
 
 
 function createOrder(){
+    let title =  document.getElementById('orderTitle').value.trim();
     let description = document.getElementById('description').value;
     let price = document.getElementById('orderPrice').value; 
-    let photo = document.getElementById('photoFile').value; 
-    console.log(photo)
+
+
     console.log(price)
     console.log(description)
 
-    if(description == '' || price== ''){
+    if(description == '' || price== '' || title == ''){
         swal("Oh wait", "Make sure you fill everything!", "warning")
     }
     else {
-        orders.push({})
+        orders.push({name: title, price: price, photo: 'picsOther/nophoto.jpg', info: description});
     }
+
+    printOrders(orders);
 }
 
 document.getElementById('orderButton').addEventListener('click', createOrder); 

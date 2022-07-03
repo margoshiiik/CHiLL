@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/7512ceb34f.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/mainPage.css">
+    <link rel="stylesheet" href="/styles/profile.css">
+    <link rel="stylesheet" href="/styles/productPopup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/lodash/4.10.0/lodash.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-lg-8">
+                     <a href="/"><h1>CHiLL</h1></a>
+                </div>
+                <div class="col-lg-4 d-flex float-right justify-content-start">
+                    <a class="button" href="/index.html"><button type="button" class="topButtoms float-right me-4 login ps-4 pe-4">Log Out</button></a>
+                    <a class="button" href="/profilePage.html"><button type="button" class="whiteBut float-right ps-4 pe-4">Profile</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-md-flex justify-content-start mt-3">
+            <a class="home menu me-4">
+                HOME
+            </a>
+
+            <a class="about menu me-4">
+                ABOUT
+            </a>
+
+            <a class="orders menu me-4" href="/html/OrderPage.html">
+                ORDERS
+            </a>
+
+            <a class="settings menu me-4">
+                SETTINGS
+            </a>
+        </div>
+
+    </header>
+
+    <h1 class="text-center mt-5">This is your profile page</h1>
+
+    <div class="containerimg d-md-flex">
+        <a id="openLikePage"><div class="likes"><img src="/picsOther/heart2 (1).png" alt=""></div></a>
+        <a href="" id="openbasketPage"><div class="likes"><img src="/picsOther/basket.png" alt=""></div></a>
+    </div>
+
+
+    <script src="/js/UserPage.js" type="module"></script>
+</body>
+</html>

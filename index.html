@@ -48,7 +48,7 @@
                 ORDERS
             </a>
 
-            <a class="settings menu me-4">
+            <a class="menu me-4" href="#popupSettings">
                 SETTINGS
             </a>
         </div>
@@ -159,7 +159,6 @@
 
                 <h1 class="text-center mt-5">Login</h1>
 
-
                     <form>
                         <input type="text" class="form-control mt-4 inputLogin" id="loginUsername"placeholder="Username" required>
     
@@ -167,9 +166,6 @@
     
                         <button class="loginButton mt-4 pb-4 ps-4 pe-4" id="loginButton">Login</button>
                     </form>
-    
-                
-                    
 
             </div>
         </div>
@@ -200,15 +196,54 @@
 
                         <button class="loginButton mt-4 pb-4 ps-4 pe-4" id="signupButton">Sign up</button>
                 
-                        
                 </form>
             </div>
         </div>
 
 
-        <div id="alertHere"></div>
+        <div id="popupSettings" class="overlayLogin">
+            <div class="popupLogin">
+                <a class="closeLogin" href="#">&times;</a>
+
+                <h1 class="text-center mt-3">Settings</h1>
+
+                
+                    <div class="form-check mt-4 text-center">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <label class="form-check-label settings" for="exampleRadios1">
+                        Light Theme
+                        </label>
+                    </div>
+                    <div class="form-check mt-2 text-center">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                        <label class="form-check-label settings" for="exampleRadios2">
+                        Dark Theme
+                        </label>
+                    </div>
+            
+                
+
+                    <h3 class="text-center mt-4">Font size</h3>
+
+                    <div class="form-group mt-3">
+                        <select class="form-control" id="exampleFormControlSelect1">
+                          <option>Default size</option>
+                          <option>Small size</option>
+                          <option>Large Size</option>
+                        </select>
+                    </div>
+                
+
+                    <button class="buyButton mt-4">Apply</button>
+
+            </div>
+        </div>
+
+
+        <!-- <div id="alertHere"></div> -->
         
 
+        <i class="fa-light fa-heart"></i>
     <script src="js/app.js" type="module"></script>
     
 </body>

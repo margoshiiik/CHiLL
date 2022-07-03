@@ -179,6 +179,48 @@ img{
     z-index: 0;
   }
 
+  .likes img{
+    width: 45px;
+    height: 45px;
+    border-radius: 0;
+    margin-left: 20px;
+  }
+
+  .popupLike{
+    border: 2px solid var(--my-pink);
+    border-radius: 30px;
+  }
+
+  .popupLike img{
+   width: 250px;
+   height: 250px;
+   margin-top: 0;
+  }
+
+
+
+#popupSettings h3  {
+    color: var(--my-pink);
+  }
+
+  #popupSettings input  {
+    margin-left: 20px;
+  }
+
+  #popupSettings .form-group, .form-check {
+    font-family: var(--additional-font);
+  }
+
+  #popupSettings .form-group{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .settings{
+    font-size: 20px;
+  }
+
   @media screen and (max-width: 1000px) {
     .topButtoms{
         float: right;

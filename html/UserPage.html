@@ -31,7 +31,10 @@
                 </div>
                 <div class="col-lg-4 d-flex float-right justify-content-start">
                     <a class="button" href="/index.html"><button type="button" class="topButtoms float-right me-4 login ps-4 pe-4">Log Out</button></a>
-                    <a class="button" href=""><button type="button" class="whiteBut float-right ps-4 pe-4">Profile</button></a>
+                    <div class="containerimg d-md-flex">
+                       <div class="likes" id="openLikePage"><img src="/picsOther/heart2 (1).png" alt=""></div>
+                        <div class="likes" id="openbasketPage"><img src="/picsOther/basket.png" alt=""></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -70,7 +73,7 @@
         </div>
     </header>
 
-        <div class="container mt-5">
+        <div class="container mt-5" id="body">
             <div class="row">
                 <div class="col-md-3">
                         <div class="filterDiv d-none d-md-block">
@@ -151,62 +154,8 @@
         </div>
 
 
-        <div id="popupLogin" class="overlayLogin">
-            <div class="popupLogin">
-                <a class="closeLogin" href="#">&times;</a>
-
-                <h1 class="text-center mt-5">Login</h1>
-
-
-                    <form>
-                        <input type="text" class="form-control mt-4 inputLogin" id="loginUsername"placeholder="Username" required>
-    
-                        <input type="password" class="form-control mt-4 inputLogin" id="loginPassword" placeholder="Password" required>
-    
-                        <button class="loginButton mt-4 pb-4 ps-4 pe-4" id="loginButton">Login</button>
-                    </form>
-    
-                
-                    
-
-            </div>
-        </div>
-
-
-        <div id="popupSignUp" class="overlayLogin">
-            <div class="popupLogin">
-                <a class="closeLogin" href="#">&times;</a>
-
-                <h1 class="text-center mt-5">Creating an account</h1>
-                
-                <form>
-
-                    <input type="text" class="form-control mt-3 inputLogin" id="nameSignup" placeholder="First name" required>
-                        
-                     
-                        <input type="text" class="form-control mt-3 inputLogin" id="surnameSignup" placeholder="Last name" required>
-
-                        <input type="text" class="form-control mt-3 inputLogin" id="usernameSignup" placeholder="Create a username" required>
-
-                        <div class="form-group">
-                            <input type="email" class="form-control mt-3 inputLogin" id="emailSignup" placeholder="name@example.com" required>
-                          </div>
-
-                        <input  type="password" class="form-control mt-3 inputLogin" id="password1Signup" placeholder="Create a Password" required>
-                        
-                        <input  type="password" class="form-control mt-3 inputLogin" id="password2Signup" placeholder="Repeat a Password" required>
-
-                        <button class="loginButton mt-4 pb-4 ps-4 pe-4" id="signupButton">Sign up</button>
-                
-                        
-                </form>
-            </div>
-        </div>
-
-
-        <div id="alertHere"></div>
         
 
-    <script src="/js/app.js" type="module"></script>
+    <script src="/js/UserPage.js" type="module"></script>
 </body>
 </html>
