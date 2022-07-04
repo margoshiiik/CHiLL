@@ -1,4 +1,5 @@
 import { orders } from "/js/OrdersArray.js";
+import { products } from "/js/products.js"
 
 function printOrders(array) {
         const myNode = document.getElementById('wrapper-for-orders');
@@ -78,3 +79,39 @@ function createOrder(){
 }
 
 document.getElementById('orderButton').addEventListener('click', createOrder); 
+
+
+function changeTheme(){
+    let value = document.getElementById('exampleRadios1').checked; 
+    console.log(document.getElementsByClassName('menu'));
+
+    if(!value){
+        document.body.style.backgroundColor = '#353535';
+        Array.from(document.getElementsByClassName('menu')).forEach((item) => {
+            item.style.color = '#FF00F5'
+        })
+        Array.from(document.getElementsByClassName('popup')).forEach((item) => {
+            item.style.backgroundColor = '#353535'
+        })
+        Array.from(document.getElementsByClassName('popup')).forEach((item) => {
+            item.style.color = '#ffffff'
+        })
+    }
+
+    else{
+        document.body.style.backgroundColor = '#fff8e3';
+        Array.from(document.getElementsByClassName('menu')).forEach((item) => {
+            item.style.color = 'black'
+        })
+        Array.from(document.getElementsByClassName('popup')).forEach((item) => {
+            item.style.backgroundColor = '#fff8e3'
+        })
+        Array.from(document.getElementsByClassName('popup')).forEach((item) => {
+            item.style.color = 'black'
+        })
+    }
+}
+
+document.getElementById('applySettings').addEventListener('click', changeTheme)
+document.getElementById('exampleRadios1').addEventListener('click', changeTheme)
+document.getElementById('exampleRadios2').addEventListener('click', changeTheme)

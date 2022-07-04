@@ -33,7 +33,7 @@ function printProducts(array) {
                                 <a class="close" href="#">&times;</a>
                                     <h1 class="mt-4">${item.title}</h1>
                                     <h2 class="mt-4">${item.price}$</h2>
-                                    <h3 class="mt-4 itemInfo ">${item.info}</h3>
+                                    <h3 class="mt-4 itemInfo">${item.info}</h3>
                                     <h5 class="mt-4 ">Made by</h5>
                                     <h5 class="mt-2 ">${item.author}</h5>
                                     
@@ -288,3 +288,38 @@ function changeAuthorisedStatus(who){
     isAutorized = !isAutorized; 
     let user = who; 
 }
+
+function changeTheme(){
+    let value = document.getElementById('exampleRadios1').checked; 
+    console.log(document.getElementsByClassName('menu'));
+
+    if(!value){
+        document.body.style.backgroundColor = '#353535';
+        Array.from(document.getElementsByClassName('menu')).forEach((item) => {
+            item.style.color = '#FF00F5'
+        })
+        Array.from(document.getElementsByClassName('popup')).forEach((item) => {
+            item.style.backgroundColor = '#353535'
+        })
+        Array.from(document.getElementsByClassName('popup')).forEach((item) => {
+            item.style.color = '#ffffff'
+        })
+    }
+
+    else{
+        document.body.style.backgroundColor = '#fff8e3';
+        Array.from(document.getElementsByClassName('menu')).forEach((item) => {
+            item.style.color = 'black'
+        })
+        Array.from(document.getElementsByClassName('popup')).forEach((item) => {
+            item.style.backgroundColor = '#fff8e3'
+        })
+        Array.from(document.getElementsByClassName('popup')).forEach((item) => {
+            item.style.color = 'black'
+        })
+    }
+}
+
+document.getElementById('applySettings').addEventListener('click', changeTheme)
+document.getElementById('exampleRadios1').addEventListener('click', changeTheme)
+document.getElementById('exampleRadios2').addEventListener('click', changeTheme)
