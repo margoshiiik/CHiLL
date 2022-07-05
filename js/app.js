@@ -1,10 +1,13 @@
+/**
+THis is the js page for the main page, here some important function  
+**/ 
+
+
 import { products } from "/js/products.js";
 import { users } from "/js/users.js";
 
 
-let isAutorized = false; 
-
-
+//function for printing the wrapper with products on the page 
 function printProducts(array) {
     const myNode = document.getElementById('wrapper');
     myNode.innerHTML = '';
@@ -94,6 +97,10 @@ function forButtons(e){
     }
 }
 
+
+/*
+function for searcing
+*/
 function forSearchButton(){
     let input = document.getElementById("searchInput").value.trim().toLowerCase();
     console.log(input);
@@ -227,7 +234,7 @@ function login(){
 document.getElementById("loginButton").addEventListener('click', login);
 
 
-
+//funciton for creating a new user
 function signUP(){
     let name = document.getElementById('nameSignup').value.trim();
     let surname =  document.getElementById('surnameSignup').value.trim();
@@ -283,7 +290,7 @@ document.getElementById('orders').addEventListener('click', () => {
     swal("Oh wait!", "If you want to visit this page you have to autorize", "warning");
 })
 
-
+//for changing theme 
 function changeAuthorisedStatus(who){
     isAutorized = !isAutorized; 
     let user = who; 

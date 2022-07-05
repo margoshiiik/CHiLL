@@ -2,8 +2,6 @@ import { products } from "/js/products.js";
 import { users } from "/js/users.js";
 
 
-let isAutorized = false; 
-
 
 function printProducts(array) {
 
